@@ -33,7 +33,7 @@ class DataArgs:
     save_dir = "data-out"
     max_length = 2048
     cache_dir = ""  # hf数据集缓存的目录
-    num_group = "500"  # concat时，每个batch包含的样本数
+    num_group = 500  # concat时，每个batch包含的样本数
     num_proc = 12
 
 
