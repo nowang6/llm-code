@@ -15,13 +15,13 @@ import datasets
 
 @dataclass
 class DataArgs:
-    model_name_or_path: str = field(default='')  # tokenizer所在目录
-    data_path: str = field(default=None)  # 待预处理的数据所在目录
-    save_dir: str = field(default=None)  # 保存预处理后的数据的存放目录
-    max_length: Optional[int] = field(default=2048)  # 每个样本的最大长度
-    cache_dir: str = field(default='')  # hf数据集缓存的目录
-    num_group: Optional[str] = field(default=1000)  # concat时，每个batch包含的样本数
-    num_proc: Optional[int] = field(default=32)
+    model_name_or_path = "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T"  # tokenizer所在目录
+    data_path = "data/fin_exam.jsonl"
+    save_dir = "data-out"
+    max_length = 2048
+    cache_dir = ""  # hf数据集缓存的目录
+    num_group = "500"  # concat时，每个batch包含的样本数
+    num_proc = 12
 
 
 parser = HfArgumentParser(DataArgs)

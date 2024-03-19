@@ -1,7 +1,7 @@
 # Pretrain模型训练
 deepspeed --num_nodes=1 --num_gpus=8 dxm_llm_main.py \
     --train_mode pretrain \
-    --model_name_or_path ./Llama-2-7b-hf \
+    --model_name_or_path TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T \
     --save_name model/model-pretrained \
     --data_path data/FinCorpus_tokenized \
     --epochs 1 \
