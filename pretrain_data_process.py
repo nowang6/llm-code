@@ -9,7 +9,7 @@ import os
 from transformers import HfArgumentParser, LlamaTokenizer
 
 # 禁止huggingface联网，加快加载本地数据集的速度
-os.environ['HF_DATASETS_OFFLINE'] = '1'
+#os.environ['HF_DATASETS_OFFLINE'] = '1'
 
 
 import os
