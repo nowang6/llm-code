@@ -5,9 +5,9 @@ import deepspeed
 def parse_arguments():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--data_path', type=str, default='', help="数据所在位置")
-    parser.add_argument("--model_name_or_path", type=str, required=True, help="模型文件位置")
-    parser.add_argument('--save_name', type=str, default='test', help='模型保存位置')
+    parser.add_argument('--data_path', type=str, default='data-out', help="数据所在位置")
+    parser.add_argument("--model_name_or_path", type=str, default='TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T', help="模型文件位置")
+    parser.add_argument('--save_name', type=str, default='out', help='模型保存位置')
 
     # optimizer/lr_scheduler
     parser.add_argument("--learning_rate", type=float, default=5e-5, help="learning rate")
