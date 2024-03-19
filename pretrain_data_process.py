@@ -9,19 +9,19 @@ import os
 from transformers import HfArgumentParser, LlamaTokenizer
 
 # 禁止huggingface联网，加快加载本地数据集的速度
-#os.environ['HF_DATASETS_OFFLINE'] = '1'
+os.environ['HF_DATASETS_OFFLINE'] = '1'
 
 
 import os
 
 
-proxy_address = "127.0.0.1"
-proxy_port = "7890"
+# proxy_address = "127.0.0.1"
+# proxy_port = "7890"
 
-os.environ["HTTP_PROXY"] = f"http://{proxy_address}:{proxy_port}"
-os.environ["HTTPS_PROXY"] = f"http://{proxy_address}:{proxy_port}"
-os.environ["FTP_PROXY"] = f"ftp://{proxy_address}:{proxy_port}"
-os.environ["SOCKS_PROXY"] = f"socks://{proxy_address}:{proxy_port}"
+# os.environ["HTTP_PROXY"] = f"http://{proxy_address}:{proxy_port}"
+# os.environ["HTTPS_PROXY"] = f"http://{proxy_address}:{proxy_port}"
+# os.environ["FTP_PROXY"] = f"ftp://{proxy_address}:{proxy_port}"
+# os.environ["SOCKS_PROXY"] = f"socks://{proxy_address}:{proxy_port}"
 
 import datasets
 
